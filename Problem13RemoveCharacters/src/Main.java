@@ -15,14 +15,14 @@ public class Main {
 			String[] splitInput = nextLine.split(", "); // since the input is two strings separated by a comma and a space, place both strings in an array
 			String string = splitInput[0]; // the first element in the array is the string
 			String toRemove = splitInput[1]; // the second element is a string containing all the characters to remove from the string
-			
+
 			StringBuilder result = new StringBuilder(); // create a new StringBuilder to store the result as we build it
 			for (char c : string.toCharArray()) { // for each character in the string
 				if (!toRemove.contains(String.valueOf(c))) { // if c is not in the string containing the characters to remove
 					result.append(c); // add it to the result string
 				}
 			}
-			
+
 			System.out.println(result.toString()); // print the string after removals
 		}
 

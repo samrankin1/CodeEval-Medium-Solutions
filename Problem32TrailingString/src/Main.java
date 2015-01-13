@@ -15,14 +15,14 @@ public class Main {
 			String[] splitInput = nextLine.split(","); // since the input is two string separated by a comma, split the line into an array of the two parts
 			String string = splitInput[0]; // the first element in the array is the string we're checking
 			String search = splitInput[1]; // the second element in the array string we're searching for
-			
+
 			if (search.length() > string.length()) { // if the search string is longer than the actual string
 				System.out.println("0"); // the actual string can't end with the search string
 				continue; // continue to the next input
 			}
-			
+
 			String end = string.substring((string.length() - search.length()), string.length()); // the substring that contains the last X characters of the string, where X is the length of the search string
-			
+
 			if (end.equals(search)) { // if the end of the string is equal to the string we're checking for
 				System.out.println("1"); // print true
 			} else { // otherwise

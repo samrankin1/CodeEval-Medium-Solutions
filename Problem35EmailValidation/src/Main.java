@@ -4,7 +4,7 @@ import java.io.FileReader;
 import java.io.IOException;
 
 public class Main {
-	
+
 	private static final String EMAIL_REGEX = "^(\\.?[0-9a-z]*?\\.?)*@([0-9a-z]*?)(\\.?[0-9a-z]*?)*$"; // regex for a valid email address
 
 	public static void main(String[] args) throws IOException {

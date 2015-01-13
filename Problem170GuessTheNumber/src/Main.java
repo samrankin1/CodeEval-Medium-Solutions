@@ -22,15 +22,15 @@ public class Main {
 			List<String> words = Arrays.asList(splitInput).subList(1, splitInput.length); // all but the first element in the input array are words we need to process
 			for (String word : words) {
 				int guess = getMidpoint(min, max); // the next guess is the midpoint of the current minimum and maximum
-				
+
 				if (word.equals("Lower")) { // if the guess needs to be lower
 					max = (guess - 1); // the new maximum is one less than the guess we just tried
 				}
-				
+
 				if (word.equals("Higher")) { // if the guess needs to be higer
 					min = (guess + 1); // the new minimum is one more than the guess we just tried
 				}
-				
+
 				if (word.equals("Yay!")) { // if this guess is correct
 					System.out.println(guess); // print out the correct number
 					break; // stop looping
@@ -44,7 +44,7 @@ public class Main {
 	// Get the integer midpoint in a range, rounding up if the range is an odd number
 	private static int getMidpoint(int lower, int upper) {
 		int range = upper - lower;
-		int toAdd = (int) Math.ceil((double) range / 2.0);
+		int toAdd = (int) Math.ceil(range / 2.0);
 		return (lower + toAdd);
 	}
 
